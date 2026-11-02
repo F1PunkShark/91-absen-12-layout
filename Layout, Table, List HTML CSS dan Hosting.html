@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Gabriella's Website</title>
+	<link rel="stylesheet" href="indexs.css" />
+	<link rel="stylesheet" href="playlist-controls.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<script src="playlist.js" defer></script>
+</head>
+<body id="top">
+	<div class="page-shell">
+		<header class="site-header">
+			<p class="header-label">Personal Website</p>
+			<h1>Gabriella Gaia</h1>
+			<p>Welcome to my little corner of the web.</p>
+		</header>
+
+		<nav class="site-nav" aria-label="Main navigation">
+			<ul class="menu-links">
+				<li><a href="biodata.html"><i class="fas fa-id-card" aria-hidden="true"></i> My Biodata</a></li>
+				<li><a href="#table"><i class="fas fa-table" aria-hidden="true"></i> Table</a></li>
+				<li><a href="#list"><i class="fas fa-list" aria-hidden="true"></i> List</a></li>
+				<li><a href="sts_91_12.html"><i class="fas fa-clipboard-check" aria-hidden="true"></i> STS</a></li>
+			</ul>
+		</nav>
+
+		<main class="main-layout">
+			<aside class="side-panel" aria-labelledby="left-content-heading">
+				<h2 id="left-content-heading"><i class="fas fa-user-circle" aria-hidden="true"></i> Welcome</h2>
+				<p>Hi, I am Gabriella Gaia. This is my personal website, where I share a little about myself and the things I enjoy.</p>
+			</aside>
+
+			<section class="main-panel" aria-labelledby="main-content-heading">
+				<p class="section-label"><i class="fas fa-star" aria-hidden="true"></i> Gabriella Gaia</p>
+				<h2 id="main-content-heading">A Little About Me</h2>
+				<p class="intro-text">Here are a few details about me, along with some of my favorite things.</p>
+
+				<section id="table" aria-labelledby="table-heading">
+					<h3 id="table-heading"><i class="fas fa-address-card" aria-hidden="true"></i> Personal Information</h3>
+					<div class="table-wrap" role="region" aria-label="Personal information table" tabindex="0">
+						<table class="biodata-table">
+							<caption>A few facts about me</caption>
+							<tbody>
+								<tr><th scope="row">Name</th><td>Gabriella Gaia</td></tr>
+								<tr><th scope="row">Place of Birth</th><td>Jakarta</td></tr>
+								<tr><th scope="row">Date of Birth</th><td>1 November 2011</td></tr>
+								<tr><th scope="row">Address</th><td>Menteng, Central Jakarta</td></tr>
+								<tr><th scope="row">Hobbies</th><td>Playing games, watching TV, dressing up</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<p class="panel-link"><a href="biodata.html">See my full biodata <span aria-hidden="true">&#8594;</span></a></p>
+				</section>
+
+				<section id="list" aria-labelledby="list-heading">
+					<h3 id="list-heading"><i class="fas fa-heart" aria-hidden="true"></i> My Favorites</h3>
+					<h4><i class="fas fa-gamepad" aria-hidden="true"></i> Hobbies</h4>
+					<ul class="interest-list hobby-list">
+						<li>Playing games</li>
+						<li>Watching TV</li>
+						<li>Dressing up</li>
+					</ul>
+					<h4><i class="fas fa-star" aria-hidden="true"></i> Favorite things</h4>
+					<ul class="interest-list favorite-list">
+						<li>Food: udon</li>
+						<li>City: Tokyo</li>
+						<li>Flower: white tulips</li>
+						<li>Animal: sharks</li>
+					</ul>
+					<p class="panel-link"><a href="biodata.html#favorites">Explore my favorite things <span aria-hidden="true">&#8594;</span></a></p>
+				</section>
+			</section>
+
+			<aside class="side-panel" aria-labelledby="right-content-heading">
+				<h2 id="right-content-heading"><i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> Website Hosting</h2>
+				<p>This website can be published with GitHub Pages. Keep <code>index.html</code>, its CSS, and any images together when uploading the project.</p>
+				<p class="panel-link"><a href="https://docs.github.com/en/pages" target="_blank" rel="noopener noreferrer">GitHub Pages guide <span aria-hidden="true">&#8599;</span></a></p>
+				<p class="panel-link"><a href="https://github.com" target="_blank" rel="noopener noreferrer">Visit GitHub <span aria-hidden="true">&#8599;</span></a></p>
+			</aside>
+		</main>
+
+		<footer class="site-footer">
+			<p>Gabriella Gaia <span aria-hidden="true">&middot;</span> Personal Website</p>
+			<a href="#top">Back to top</a>
+		</footer>
+	</div>
+	<audio id="background-audio" preload="auto" aria-hidden="true"></audio>
+	<div class="playlist-control">
+		<button class="next-track-button" id="next-track-button" type="button">Next song <span aria-hidden="true">&#9197;</span></button>
+	</div>
+</body>
+</html>
