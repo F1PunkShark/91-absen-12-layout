@@ -1,0 +1,250 @@
+:root {
+  --bg-1: #f9f4ff;
+  --bg-2: #fef6fb;
+  --panel: rgba(255,255,255,0.88);
+  --panel-border: rgba(125, 92, 161, 0.18);
+  --primary: #5d3aa8;
+  --primary-deep: #3e2878;
+  --accent: #ffb5d9;
+  --accent-2: #cfe5ff;
+  --text: #2d2340;
+  --muted: #625a73;
+  --shadow: 0 18px 40px rgba(92, 62, 133, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.site-header,
+.site-nav,
+.main-panel,
+.side-panel,
+.site-footer {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.site-header {
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.header-label,
+.section-label {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(93, 58, 168, 0.08);
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+}
+
+.site-header h1 {
+  margin: 0.8rem 0 0.4rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.site-header p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+.site-nav {
+  margin-bottom: 1.5rem;
+  padding: 0.9rem 1rem;
+}
+
+.menu-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-links li {
+  margin: 0;
+}
+
+.menu-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1rem;
+  color: var(--primary-deep);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.menu-links a:hover,
+.menu-links a:focus-visible {
+  background: rgba(93, 58, 168, 0.08);
+  transform: translateY(-1px);
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 260px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.side-panel,
+.main-panel {
+  padding: 1.2rem 1.1rem;
+}
+
+.side-panel h2,
+.main-panel h2,
+.main-panel h3,
+.main-panel h4 {
+  color: var(--primary-deep);
+}
+
+.side-panel p,
+.main-panel p,
+.main-panel li {
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.main-panel {
+  min-width: 0;
+}
+
+.intro-text {
+  margin-top: 0.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(93, 58, 168, 0.12);
+  border-radius: 14px;
+  margin-top: 0.8rem;
+}
+
+.biodata-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.55);
+}
+
+.biodata-table th,
+.biodata-table td {
+  text-align: left;
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid rgba(93, 58, 168, 0.12);
+}
+
+.biodata-table th {
+  width: 38%;
+  background: rgba(93, 58, 168, 0.05);
+  color: var(--primary-deep);
+}
+
+.biodata-table caption {
+  padding: 0.75rem 1rem 0.5rem;
+  text-align: left;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.panel-link {
+  margin-top: 1rem;
+}
+
+.panel-link a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.panel-link a:hover,
+.panel-link a:focus-visible {
+  text-decoration: underline;
+}
+
+.interest-list {
+  margin: 0.5rem 0 1rem 1.1rem;
+  padding: 0;
+}
+
+.site-footer {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+.site-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .side-panel,
+  .main-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-shell {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .site-header,
+  .site-nav,
+  .main-panel,
+  .side-panel,
+  .site-footer {
+    border-radius: 16px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

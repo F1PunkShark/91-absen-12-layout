@@ -1,0 +1,22 @@
+.playlist-control {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 999;
+}
+
+.next-track-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, #7e57c2, #5d3aa8);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(93, 58, 168, 0.25);
+  cursor: pointer;
+}
+
+.next-track-button:hover,
+.next-track-button:focus-visible {
+  filter: brightness(1.05);
+}
